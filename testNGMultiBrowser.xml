@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG" parallel="tests" thread-count="5">
+	<test name="ChromeTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="username" value="hello" />
+		<parameter name="password" value="dsahfjkdsal" />
+		<classes>
+			<class name="testNG.MultiBrowser" />
+		</classes>
+	</test>
+	
+	<test name="FirefoxTest">
+		<parameter name="browser" value="firefox" />
+		<parameter name="username" value="hello" />
+		<parameter name="password" value="dsahfjkdsal" />
+		<classes>
+			<class name="testNG.MultiBrowser" />
+		</classes>
+	</test>
+	
+</suite>

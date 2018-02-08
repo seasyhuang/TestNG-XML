@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestNG">
+	<test name="Test Annotations">
+	<parameter name="param1" value="this is param 1"/>
+ 	<parameter name="param2" value="doot doot"/>
+		<classes>
+			<class name="testNG.TestAnnotations" />
+		</classes>
+	</test>
+</suite>
