@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestNG" parallel="tests" thread-count="5">
+<suite name="TestNG"> <!-- parallel="tests" thread-count="5"--> 
+	
+	<!-- This implements the listener on the suite level -->
+	<listeners>
+		<listener class-name="testNG.TestNGListener"/>
+	</listeners>
+	
+	
 	<test name="ChromeTest">
 		<parameter name="browser" value="chrome" />
 		<parameter name="username" value="hello" />
@@ -11,6 +18,7 @@
 		</classes>
 	</test>
 	
+	<!-- 
 	<test name="FirefoxTest">
 		<parameter name="browser" value="firefox" />
 		<parameter name="username" value="hello" />
@@ -19,5 +27,6 @@
 			<class name="testNG.MultiBrowser" />
 		</classes>
 	</test>
-	
+	 -->
+	 
 </suite>
